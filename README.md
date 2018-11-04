@@ -1,7 +1,7 @@
 # Cavern 3
 A reverb plugin made with Juce, this is the third installation in the Cavern series.
 
-##Features
+## Features
 Four knobs controlling the Dry/Wet level, Room Size, Damping, and Room Width.
 
 ## Credits
