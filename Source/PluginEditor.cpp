@@ -17,7 +17,7 @@ Cavern3AudioProcessorEditor::Cavern3AudioProcessorEditor (Cavern3AudioProcessor&
 {
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
-    setSize (400, 300);
+    setSize (500, 400);
     
     addAndMakeVisible(dryWetSlider);
     dryWetSlider.setSliderStyle(Slider::RotaryVerticalDrag);
@@ -57,12 +57,18 @@ void Cavern3AudioProcessorEditor::paint (Graphics& g)
     g.setColour (Colours::white);
     g.setFont (15.0f);
     //g.drawFittedText ("", getLocalBounds(), Justification::centred, 1);
+    
+    //Add Background Image
+    Image background = ImageCache::getFromMemory (Images::perforatedbluemetal_jpg, Images::perforatedbluemetal_jpgSize);
+    Image logo = ImageCache::getFromMemory (Images::carvern3outward_png, Images::carvern3outward_pngSize);
+    g.drawImageWithin (background, 0, 0, 500, 400, RectanglePlacement::fillDestination, false);
+    g.drawImageWithin (logo, 30, 5, 440, 200, RectanglePlacement::stretchToFit, false);
 }
 
 void Cavern3AudioProcessorEditor::resized()
 {
     const int sliderWidth = getWidth() / 4;
-    const int sliderHeight = getHeight();
+    const int sliderHeight = getHeight() + 200;
     
     dryWetSlider.setBounds(0, 0, sliderWidth, sliderHeight);
     roomSizeSlider.setBounds(sliderWidth, 0, sliderWidth, sliderHeight);

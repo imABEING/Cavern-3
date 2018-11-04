@@ -3,6 +3,8 @@
 <JUCERPROJECT id="tgAAkL" name="Cavern 3" projectType="audioplug" jucerVersion="5.3.2">
   <MAINGROUP id="D2gWa7" name="Cavern 3">
     <GROUP id="{A38EF301-462C-A191-5BFB-76C7D83691EB}" name="Source">
+      <FILE id="Xh3Gr6" name="Images.cpp" compile="1" resource="0" file="Source/Images.cpp"/>
+      <FILE id="PjJvuY" name="Images.h" compile="0" resource="0" file="Source/Images.h"/>
       <FILE id="tVQpam" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="cR3FiZ" name="PluginProcessor.h" compile="0" resource="0"
